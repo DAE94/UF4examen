@@ -1,0 +1,12 @@
+<p>home-david-alcaraz works!</p>
+<form (ngSubmit)="buscarPokemon(this.IdDelPokemon)">
+  <label >ID del Pokemon</label>
+  <input type="number" [(ngModel)]="IdDelPokemon" name="pokemonId" placeholder="Escriu la ID">
+  <button type="submit">Buscar</button>
+</form>
+<img [src]="imatgePokemon" alt="Pokemon">
+<nom>nom: {{nomPokemon}}</nom>
+<habilitats *ngFor="let habilitat of habilitats">
+  <p>{{habilitat.nom}}</p>
+  <p>{{habilitat.descripcio}}</p>
+</habilitats>
